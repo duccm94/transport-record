@@ -1,0 +1,59 @@
+{
+  "name": "transport-record",
+  "version": "1.0.0",
+  "description": "Export Excel file of Transport records",
+  "main": "src/main.js",
+  "scripts": {
+    "dev": "electron .",
+    "start": "electron-forge start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "config": {
+    "forge": {
+      "electronPackagerConfig": {
+        "asar": true,
+        "packageManager": "npm",
+        "prune": true,
+        "ignore": [
+          "/__pycache__",
+          "/.vscode",
+          "/build",
+          "/CsvFiles",
+          "/ExcelFiles",
+          "/template",
+          "/UserManual",
+          "/venv",
+          "main.py",
+          "main.spec",
+          "package-lock.json",
+          "requirements.txt",
+          "Transport Record.zip"
+        ]
+      }
+    }
+  },
+  "keywords": [
+    "transport",
+    "record",
+    "csv",
+    "convert",
+    "xlsx",
+    "excel"
+  ],
+  "author": "CMD",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "electron-compile": "^6.4.4",
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "electron-forge": "^5.2.4",
+    "electron-prebuilt-compile": "4.0.0"
+  }
+}

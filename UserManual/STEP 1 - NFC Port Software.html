@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NFC Port Software</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/custom.css" />
+</head>
+<body>
+    <div class="container">
+        <blockquote class="blockquote text-center">
+            <h1 class="mb-0">NFCポートソフトウェアのインストールガイド</h1>
+            <footer class="blockquote-footer">NFC Port Software Installation Guide</footer>
+        </blockquote>
+        <section>
+            <h3>インストール前に</h3>
+            <ul>
+                <li>
+                    NFCポートソフトウェアでは、下記ソフトウェアがセットアップされます。
+                    <ul>
+                        <li>NFCポート ドライバソフトウェア</li>
+                        <li>FeliCa Secure Client Ver.2.0（1.0機能を包含）</li>
+                        <li>NFCポート自己診断</li>
+                        <li>NFC Proxy Service</li>
+                    </ul>
+                </li>
+                <li>インストールの前に、すべてのアプリケーションを終了させてください。</li>
+                <li>インストールの前にNFCポート／パソリを接続しないでください。</li>
+            </ul>
+        </section>
+        <section>
+            <h3>NFCポートソフトウェアのインストール</h3>
+            <div class="alert alert-warning" role="alert">
+                <h4>ご利用にあたってのご注意</h4>
+                <ul>
+                    <li>管理者権限でインストールを実行してください。</li>
+                    <li>インストール後、自己診断を行ってエラーが発生する場合には、「ドライバーが上手く認識されなかった場合の対処手順」をご確認ください。</li>
+                    <li>画面は、Ver.4.3.2.18の場合の例です。</li>
+                </ul>
+            </div>
+            <div>
+                <p>2.0未満の旧呼称のソフトウェア(パソリ基本ソフトウェア、ソニーFeliCaリーダー／ライターソフトウェア)がインストールされている場合は、下記画面が表示されます。当該ソフトウェアを一旦アンインストールしてから、再度インストールを実行してください。</p>
+                <img src="./assets/felicaportsoftware_img_01.jpg"
+                    class="mx-auto d-block" alt="">
+                <p>2.0以上のバージョンがインストールされている場合は、下記画面が表示されます。「はい(Y)」をクリックすると、バージョンアップインストールが行われます。</p>
+                <img src="./assets/felicaportsoftware_img_02.jpg"
+                    class="mx-auto d-block" alt="">
+                <p>既に同一バージョンのNFCポートソフトウェアがインストールされている場合は、下記画面が表示されます。「はい(Y)」をクリックすると、再インストールが行われます。</p>
+                <img src="./assets/felicaportsoftware_img_03.jpg"
+                    class="mx-auto d-block" alt="">
+                <p>既にPC内蔵NFCポートソフトウェアがインストールされている場合は、下記2画面のいずれかが表示されます。「はい(Y)」をクリックすると、再インストールが行われます</p>
+                <img src="./assets/felicaportsoftware_img_04.jpg"
+                    class="mx-auto d-block" alt="">
+                <br/>
+                <img src="./assets/felicaportsoftware_img_05.jpg"
+                    class="mx-auto d-block" alt="">
+                <p>以下、新規インストールの場合です。それ以外の場合は、画面の表示に従ってインストールを行ってください。</p>
+                <img src="./assets/felicaportsoftware_img_06.jpg"
+                    class="mx-auto d-block" alt="">
+                <p>インストーラを起動すると上記画面が表示されます。内容を確認して「次へ(N)」をクリックしてください。</p>
+                <img src="./assets/felicaportsoftware_img_07.jpg"
+                    class="mx-auto d-block" alt="">
+                <p>使用許諾契約について表示されますので、内容をご確認の上、同意される場合は「使用許諾契約の全条項に同意します(A)」を選択し、「次へ(N)」をクリックしてください。</p>
+                <img src="./assets/felicaportsoftware_img_08.jpg"
+                    class="mx-auto d-block" alt="">
+                <p>FeliCa Secure Clientのインストール先を設定します。インストールフォルダーを変更したい場合は、「参照(R)」のボタンでインストール先のフォルダーを選択してください。インストール先に問題がなければ、「次へ(N)」をクリックします。</p>
+                <img src="./assets/felicaportsoftware_img_09.jpg"
+                    class="mx-auto d-block" alt="">
+                <p>インストール先を確認します。問題なければ、「次へ(N)」をクリックします。</p>
+                <img src="./assets/felicaportsoftware_img_10.jpg"
+                    class="mx-auto d-block" alt="">
+                <p>インストールが行われ、完了を通知する画面が表示されます。<br> インストール後、コンピューターのUSB端子にNFCポート／パソリを接続することで、NFCポート／パソリがコンピューターに認識され、利用可能となります。
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3>自己診断手順</h3>
+            <div>
+                <h3>1.NFCポート自己診断プログラムの起動</h3>
+                <p>NFCポート／パソリが正しく認識されているか動作確認を行います。NFCポート／パソリをUSB 端子に接続し、FeliCa対応カードをかざしてから、[スタート]-[NFCポート]-[NFCポート自己診断]
+                    を選択して起動してください。</p>
+                <h3>2.起動画面</h3>
+                <p>NFCポートソフトウェア（旧FeliCaポートソフトウェア）のバージョン確認ができます。</p>
+                <img src="./assets/felicaportsoftware_img_11.jpg"
+                    class="mx-auto d-block" alt="">
+                <p>本画面が表示されたら、指示に従い「次へ(N)」をクリックします。</p>
+                <h3>3.NFCポート／パソリ デバイスの確認</h3>
+                <img src="./assets/felicaportsoftware_img_12.jpg"
+                    class="mx-auto d-block" alt="">
+                <p>外付けタイプをチェックして、「次へ(N)」をクリックしてください。</p>
+        
+                <h3>4.自己診断結果</h3>
+                <img src="./assets/felicaportsoftware_img_13.jpg"
+                    class="mx-auto d-block" alt="">
+                <p>自己診断結果が正常に動作した場合は、上記画面が表示されます。
+                    <br>ポート診断とカードとの通信が「ＯＫ」であることを確認してください。
+                    <br>本画面が表示されれば、NFCポート／パソリが正しく動作しています。</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
