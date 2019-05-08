@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Choose Records</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../node_modules/datatables.net-select-bs4/css/select.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/custom.css" />
+</head>
+
+<body>
+    <table id="data-table" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Entry Line</th>
+                <th>Entry Station</th>
+                <th>Exit Line</th>
+                <th>Exit Station</th>
+                <th>Usage</th>
+                <th>Balance</th>
+                <th>Process</th>
+                <th>Memo</th>
+                <th id="action-column-header">Action</th>
+            </tr>
+        </thead>
+    </table>
+
+    <form>
+        <div class="form-group">
+            <button id="save-button" class="btn btn-primary" type="button">Save records</button>
+        </div>
+    </form>
+    
+    <form>
+        <div id="export-form" class="form-group">
+            <label for="directory-button">Choose where to export Excel Transport Record File</label>
+            <button id="directory-button" class="btn btn-info btn-sm" type="button">Choose directory</button>
+            <input id="directory-field" class="form-control" type="text" readonly>
+            <button id="export-button" class="btn btn-primary" type="button">Save and Export to Excel</button>
+        </div>
+    </form>
+</body>
+
+<script>
+    require('../renderer-process/data-table.js')
+</script>
+
+</html>

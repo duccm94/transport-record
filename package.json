@@ -1,36 +1,50 @@
 {
   "name": "transport-record",
+  "productName": "transport-record",
   "version": "1.0.0",
   "description": "Export Excel file of Transport records",
   "main": "src/main.js",
   "scripts": {
     "dev": "electron .",
     "start": "electron-forge start",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "config": {
     "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ]
+      },
       "electronPackagerConfig": {
         "asar": true,
-        "packageManager": "npm",
+        "packageManager": "yarn",
         "prune": true,
         "ignore": [
           "/__pycache__",
           "/.vscode",
           "/build",
-          "/CsvFiles",
-          "/ExcelFiles",
+          "/NotInUse",
           "/template",
           "/UserManual",
           "/venv",
           "main.py",
+          "card_reader.py",
+          "constants.py",
+          "database.py",
+          "felicalib.dll",
           "main.spec",
           "package-lock.json",
+          "yarn.lock",
           "requirements.txt",
-          "Transport Record.zip"
+          "transport-record.zip",
+          ".gitignore"
         ]
+      },
+      "electronWinstallerConfig": {
+        "name": "transport-record"
       }
     }
   },
@@ -42,12 +56,16 @@
     "xlsx",
     "excel"
   ],
-  "author": "CMD",
+  "author": "DucCM",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "bootstrap": "^4.2.1",
+    "datatables.net-bs4": "^1.10.19",
+    "datatables.net-select-bs4": "^1.2.7",
     "electron-compile": "^6.4.4",
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "jquery": "^3.3.1"
   },
   "devDependencies": {
     "babel-plugin-transform-async-to-generator": "^6.24.1",

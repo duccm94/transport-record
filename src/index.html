@@ -1,57 +1,33 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>Transport Record</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/index.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/custom.css" />
 </head>
+
 <body>
-    <div class="center-screen">
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
+    <div id="content" class="center-screen">
         <form>
             <div class="form-group">
-                <label for="input-button">Select Transport Record CSV File</label>
-                <button id="input-button" class="btn btn-info btn-sm" type="button">Choose File Type (.csv)</button>
+                <button id="convert-button" class="btn btn-outline-info btn-lg btn-block" type="button">Read card</button>
             </div>
             <div class="form-group">
-                <input id="input-field" class="form-control" type="text" readonly>
-            </div>
-            <!-- <div class="form-group">
-                <label for="input-button">Select Expense Report Excel File</label>
-                <button id="output-button" class="btn btn-info" type="button">Choose File Type (.xlsx)</button>
-                <input id="output-field" class="form-control" type="text" readonly>
-            </div> -->
-            <div class="text-center">
-                <button id="convert-button" class="btn btn-primary" type="button">Convert</button>
+                <button id="history-button" class="btn btn-outline-success btn-lg btn-block" type="button">Show saved records</button>
             </div>
         </form>
     </div>
 </body>
 
-<script>
-    const { ipcRenderer } = require('electron')
+<script>require('./renderer.js')</script>
 
-    const inputButton = document.getElementById('input-button')
-    inputButton.addEventListener('click', () => {
-        ipcRenderer.send('input-button-click')
-    })
-
-    // const outputButton = document.getElementById('output-button')
-    // outputButton.addEventListener('click', () => {
-    //     ipcRenderer.send('output-button-click')
-    // })
-
-    const convertButton = document.getElementById('convert-button')
-    convertButton.addEventListener('click', () => {
-        ipcRenderer.send('convert-button-click')
-    })
-
-    ipcRenderer.on('show-input-path', (event, data) => {
-        document.getElementById('input-field').value = data
-    })
-
-    // ipcRenderer.on('show-output-path', (event, data) => {
-    //     document.getElementById('output-field').value = data
-    // })
-</script>
 </html>

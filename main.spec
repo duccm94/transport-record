@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['main.py'],
-             pathex=['d:\\workspace\\transport-record'],
+             pathex=['D:\\workspace\\transport-record'],
              binaries=[],
              datas=[],
              hiddenimports=[],
